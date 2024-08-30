@@ -9,3 +9,26 @@ console.log(library)
 
 //update the availability of the book
 library[2].available = true;
+console.log(library);
+
+library.splice(3, 1);
+console.log(library)
+
+const check = library[0].title;
+console.log(check.includes("The Great Gatsby"));
+// Avalibilty of first book changed 
+library[0].available = false
+console.log(library);
+// Borrowed the first book
+library.shift(0);
+console.log(library);
+// Adding a new book to the library 
+library.unshift({title: "The catcher in the Rye", author: "J.D. Salinger", yearPublished: 1951, available: true});
+console.log(library);
+// Extracting title into a single string 
+const title = ["The catcher in the Rye", "To Kill a Mockingbird", "1984"];
+title.join(",");
+console.log(title);
+// new array 
+let newArrivals = library.slice(1);
+console.log(newArrivals);
